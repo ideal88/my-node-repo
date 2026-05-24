@@ -2,7 +2,7 @@
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -41,9 +41,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offset = 80;
+            const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top: position,
+                behavior: 'smooth'
             });
         }
     });
@@ -52,45 +54,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Animate elements on scroll
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -40px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Apply animation to cards and sections
-document.querySelectorAll('.service-card, .fleet-card, .testimonial-card, .material-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+document.querySelectorAll('.service-card, .fleet-card, .testimonial-card, .material-item, .feature-item').forEach(el => {
+    el.classList.add('animate-in');
     observer.observe(el);
 });
+
+// Add CSS for animations dynamically
+const style = document.createElement('style');
+style.textContent = `
+    .animate-in {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .animate-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`;
+document.head.appendChild(style);
 
 // Form submission handler
 const form = document.querySelector('.contact-form');
 if (form) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        
-        // Show success message
+
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
-        btn.textContent = '✅ Message Sent!';
-        btn.style.background = '#10b981';
-        
+
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        // Simulate submission
         setTimeout(() => {
-            btn.textContent = originalText;
-            btn.style.background = '';
-            form.reset();
-        }, 3000);
+            btn.textContent = 'Enquiry Sent';
+            btn.style.background = '#38a169';
+            btn.style.color = '#fff';
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                btn.style.color = '';
+                btn.disabled = false;
+                form.reset();
+            }, 3000);
+        }, 1000);
     });
 }

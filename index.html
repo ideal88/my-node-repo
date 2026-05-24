@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TruckPro Logistics | Construction Supplies & Hauling</title>
+    <title>TruckPro Logistics | Construction Logistics & Material Sourcing</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">🚛 TruckPro</a>
+            <a href="#" class="logo">
+                <span class="logo-icon">&#9670;</span> TruckPro Logistics
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -22,9 +24,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#fleet">Fleet</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
             </ul>
         </div>
     </nav>
@@ -33,24 +35,34 @@
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>🏗️ Construction Supplies<br>Delivered On Time, Every Time</h1>
-            <p>Your trusted partner for logistics, sourcing, and hauling of construction materials across the region.</p>
+            <div class="hero-badge">Construction Logistics Specialists</div>
+            <h1>Reliable Haulage &amp; Sourcing<br>for Construction Projects</h1>
+            <p>We provide end-to-end logistics solutions for the construction industry — from sourcing quality materials to delivering them on-site with our fleet of tipper trucks, grab lorries, and box trucks.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get a Free Quote 📋</a>
-                <a href="#services" class="btn btn-secondary">Our Services →</a>
+                <a href="#contact" class="btn btn-primary">Request a Quote</a>
+                <a href="#services" class="btn btn-outline">View Services</a>
             </div>
-            <div class="hero-stats">
+        </div>
+        <div class="hero-stats-bar">
+            <div class="container stats-container">
                 <div class="stat">
                     <span class="stat-number">500+</span>
-                    <span class="stat-label">Deliveries/Month</span>
+                    <span class="stat-label">Monthly Deliveries</span>
                 </div>
+                <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-number">98%</span>
                     <span class="stat-label">On-Time Rate</span>
                 </div>
+                <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-number">15+</span>
-                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-label">Years in Operation</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Vehicles in Fleet</span>
                 </div>
             </div>
         </div>
@@ -59,93 +71,53 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">What We Do 💪</h2>
-            <p class="section-subtitle">End-to-end logistics and sourcing for your construction projects</p>
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Construction Logistics &amp; Material Sourcing</h2>
+                <p class="section-subtitle">From aggregates to building supplies, we source, transport, and deliver everything your project needs — on time and on budget.</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🚚</div>
-                    <h3>Heavy Hauling</h3>
-                    <p>Flatbed and dump truck services for sand, gravel, cement, steel, lumber, and all construction materials.</p>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>Tipper Truck Haulage</h3>
+                    <p>Bulk delivery of aggregates, sand, gravel, topsoil, and hardcore. Our tipper fleet handles loads from 6 to 20 tonnes for projects of any scale.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📦</div>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
                     <h3>Material Sourcing</h3>
-                    <p>We source quality construction supplies at competitive prices from trusted suppliers and quarries.</p>
+                    <p>We source construction supplies at competitive trade prices — cement, blocks, bricks, timber, steel, and specialist materials from trusted suppliers.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🗺️</div>
-                    <h3>Route Planning</h3>
-                    <p>Optimized delivery routes to get your materials to the job site fast and cost-effectively.</p>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>Grab Lorry Services</h3>
+                    <p>Efficient loading and removal of muck, rubble, and waste. Our grab lorries access tight spaces and load without the need for additional plant.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Site Delivery</h3>
-                    <p>Direct-to-site delivery with experienced drivers who understand construction site logistics.</p>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>Box Truck Delivery</h3>
+                    <p>Enclosed, secure transport for palletised goods, fixtures, fittings, and weather-sensitive materials. Tail-lift equipped for easy offloading.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Scheduled &amp; Same-Day</h3>
+                    <p>Flexible scheduling to match your project timeline. We offer planned deliveries, next-day service, and emergency same-day dispatch.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
                     <h3>Supply Chain Management</h3>
-                    <p>Full project supply coordination — we manage timelines so you never run out of materials.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤝</div>
-                    <h3>Vendor Partnerships</h3>
-                    <p>Strong relationships with quarries, mills, and manufacturers for the best pricing and availability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container about-grid">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop" alt="Logistics warehouse with trucks" loading="lazy">
-            </div>
-            <div class="about-content">
-                <h2>Why Choose Us? 🌟</h2>
-                <p>With over 15 years in the construction logistics industry, we know what it takes to keep your project moving. From sourcing raw materials to delivering them safely on-site, we handle it all.</p>
-                <ul class="about-list">
-                    <li>✅ Licensed and insured fleet</li>
-                    <li>✅ GPS-tracked deliveries in real time</li>
-                    <li>✅ Competitive bulk pricing on materials</li>
-                    <li>✅ Flexible scheduling — weekends & rush orders</li>
-                    <li>✅ Dedicated project coordinators</li>
-                    <li>✅ Eco-friendly route optimization</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Materials Section -->
-    <section class="materials">
-        <div class="container">
-            <h2 class="section-title">Materials We Source & Deliver 🧱</h2>
-            <p class="section-subtitle">Everything your construction project needs, from foundation to finish</p>
-            <div class="materials-grid">
-                <div class="material-item">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&h=200&fit=crop" alt="Sand and gravel" loading="lazy">
-                    <span>Sand & Gravel 🏖️</span>
-                </div>
-                <div class="material-item">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&h=200&fit=crop" alt="Cement and concrete" loading="lazy">
-                    <span>Cement & Concrete 🧱</span>
-                </div>
-                <div class="material-item">
-                    <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=300&h=200&fit=crop" alt="Steel and rebar" loading="lazy">
-                    <span>Steel & Rebar 🔩</span>
-                </div>
-                <div class="material-item">
-                    <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=300&h=200&fit=crop" alt="Lumber and timber" loading="lazy">
-                    <span>Lumber & Timber 🪵</span>
-                </div>
-                <div class="material-item">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=300&h=200&fit=crop" alt="Bricks and blocks" loading="lazy">
-                    <span>Bricks & Blocks 🧱</span>
-                </div>
-                <div class="material-item">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=300&h=200&fit=crop" alt="Pipes and fittings" loading="lazy">
-                    <span>Pipes & Fittings 🔧</span>
+                    <p>Full project coordination — we manage your material pipeline from procurement through to site delivery, keeping your build on track.</p>
                 </div>
             </div>
         </div>
@@ -154,29 +126,141 @@
     <!-- Fleet Section -->
     <section class="fleet" id="fleet">
         <div class="container">
-            <h2 class="section-title">Our Fleet 🚛</h2>
-            <p class="section-subtitle">Modern, well-maintained trucks ready for any job</p>
+            <div class="section-header">
+                <span class="section-tag">Our Fleet</span>
+                <h2 class="section-title">Purpose-Built for Construction</h2>
+                <p class="section-subtitle">A modern, well-maintained fleet of specialist vehicles ready to serve your project requirements.</p>
+            </div>
             <div class="fleet-grid">
                 <div class="fleet-card">
-                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&h=250&fit=crop" alt="Flatbed truck" loading="lazy">
+                    <div class="fleet-image">
+                        <img src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?w=600&h=400&fit=crop" alt="Tipper truck delivering aggregates at construction site" loading="lazy">
+                    </div>
                     <div class="fleet-info">
-                        <h3>Flatbed Trucks</h3>
-                        <p>For steel, lumber, and oversized loads</p>
+                        <h3>Tipper Trucks</h3>
+                        <p>6-wheel and 8-wheel tippers for sand, gravel, aggregates, topsoil, and muck-away. Capacities from 6t to 20t.</p>
+                        <ul class="fleet-specs">
+                            <li>6t – 20t payload</li>
+                            <li>Rear &amp; side tipping</li>
+                            <li>FORS accredited</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="fleet-card">
-                    <img src="https://images.unsplash.com/photo-1562920618-5801a0e8e1e0?w=400&h=250&fit=crop" alt="Dump truck" loading="lazy">
+                    <div class="fleet-image">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop" alt="Grab lorry with hydraulic arm at work site" loading="lazy">
+                    </div>
                     <div class="fleet-info">
-                        <h3>Dump Trucks</h3>
-                        <p>Sand, gravel, dirt, and aggregate hauling</p>
+                        <h3>Grab Lorries</h3>
+                        <p>Hydraulic grab arm vehicles for loading and removing waste, rubble, soil, and aggregates without additional machinery.</p>
+                        <ul class="fleet-specs">
+                            <li>360° grab reach</li>
+                            <li>No skip required</li>
+                            <li>Tight access capable</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="fleet-card">
-                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=400&h=250&fit=crop" alt="Box truck" loading="lazy">
+                    <div class="fleet-image">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&h=400&fit=crop" alt="Box truck for secure construction material delivery" loading="lazy">
+                    </div>
                     <div class="fleet-info">
                         <h3>Box Trucks</h3>
-                        <p>Protected delivery for sensitive materials</p>
+                        <p>Enclosed body vehicles for secure, weather-protected delivery of palletised materials, tools, and fixtures.</p>
+                        <ul class="fleet-specs">
+                            <li>Tail-lift equipped</li>
+                            <li>Secure &amp; weatherproof</li>
+                            <li>7.5t – 18t capacity</li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Why Us Section -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&h=500&fit=crop" alt="Logistics operations and fleet management" loading="lazy">
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Why TruckPro</span>
+                <h2>Built for the Construction Industry</h2>
+                <p>With over 15 years of experience in construction logistics, we understand the demands of the building trade. Late deliveries cost money — that's why reliability is at the core of everything we do.</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-check">&#10003;</div>
+                        <div>
+                            <strong>GPS-Tracked Fleet</strong>
+                            <p>Real-time visibility on every delivery</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">&#10003;</div>
+                        <div>
+                            <strong>Trade Pricing on Materials</strong>
+                            <p>Competitive rates through established supplier networks</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">&#10003;</div>
+                        <div>
+                            <strong>Fully Licensed &amp; Insured</strong>
+                            <p>FORS accredited, fully compliant fleet operations</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">&#10003;</div>
+                        <div>
+                            <strong>Flexible Scheduling</strong>
+                            <p>Early starts, weekends, and same-day available</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">&#10003;</div>
+                        <div>
+                            <strong>Dedicated Account Managers</strong>
+                            <p>Single point of contact for your project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="materials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Materials</span>
+                <h2 class="section-title">What We Source &amp; Deliver</h2>
+                <p class="section-subtitle">Quality construction materials sourced from vetted suppliers and delivered direct to your site.</p>
+            </div>
+            <div class="materials-grid">
+                <div class="material-item">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&h=260&fit=crop" alt="Sand and aggregates" loading="lazy">
+                    <div class="material-label">Sand &amp; Aggregates</div>
+                </div>
+                <div class="material-item">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=260&fit=crop" alt="Cement and concrete" loading="lazy">
+                    <div class="material-label">Cement &amp; Concrete</div>
+                </div>
+                <div class="material-item">
+                    <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=400&h=260&fit=crop" alt="Steel and rebar" loading="lazy">
+                    <div class="material-label">Steel &amp; Rebar</div>
+                </div>
+                <div class="material-item">
+                    <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?w=400&h=260&fit=crop" alt="Timber and lumber" loading="lazy">
+                    <div class="material-label">Timber &amp; Lumber</div>
+                </div>
+                <div class="material-item">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=260&fit=crop" alt="Bricks and blocks" loading="lazy">
+                    <div class="material-label">Bricks &amp; Blocks</div>
+                </div>
+                <div class="material-item">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=260&fit=crop" alt="Drainage and pipework" loading="lazy">
+                    <div class="material-label">Drainage &amp; Pipework</div>
                 </div>
             </div>
         </div>
@@ -185,29 +269,32 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say 💬</h2>
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">Trusted by Builders Across the Region</h2>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"TruckPro has been our go-to for material delivery on every project. Always on time, great prices on sourced materials."</p>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"TruckPro has been our go-to for material delivery on every project. Always on time, great prices on sourced materials, and their tippers are always clean and well-maintained."</p>
                     <div class="testimonial-author">
-                        <strong>— Marcus Johnson</strong>
-                        <span>Johnson Construction LLC</span>
+                        <strong>Marcus Johnson</strong>
+                        <span>Johnson Construction Ltd</span>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"They sourced and delivered 200 tons of aggregate in 3 days. Incredible turnaround. Highly recommend!"</p>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"They sourced and delivered 200 tonnes of aggregate in 3 days for our road project. The grab lorries saved us hiring additional plant. Incredible turnaround."</p>
                     <div class="testimonial-author">
-                        <strong>— Sarah Williams</strong>
-                        <span>Williams & Co Builders</span>
+                        <strong>Sarah Williams</strong>
+                        <span>Williams &amp; Co Builders</span>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Professional drivers, clean trucks, and they actually show up when they say they will. A rare find in this industry."</p>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Professional operation from start to finish. Their account manager kept us updated throughout and the drivers know how to work safely on active construction sites."</p>
                     <div class="testimonial-author">
-                        <strong>— David Chen</strong>
+                        <strong>David Chen</strong>
                         <span>Pacific Development Group</span>
                     </div>
                 </div>
@@ -218,45 +305,56 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container cta-content">
-            <h2>Ready to Move Your Materials? 🚀</h2>
-            <p>Get a free quote today. We'll handle the logistics so you can focus on building.</p>
-            <a href="#contact" class="btn btn-primary btn-large">Request a Quote →</a>
+            <h2>Ready to Streamline Your Site Deliveries?</h2>
+            <p>Get a competitive quote for haulage, material sourcing, or full supply chain management. We respond within 2 hours.</p>
+            <a href="#contact" class="btn btn-primary btn-large">Request a Quote</a>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch 📞</h2>
-            <p class="section-subtitle">Ready to discuss your project? We'd love to hear from you.</p>
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Tell us about your project and we'll provide a tailored quote within 2 hours.</p>
+            </div>
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="contact-icon">📍</span>
+                        <div class="contact-icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
                         <div>
                             <strong>Address</strong>
                             <p>1234 Industrial Blvd, Suite 100<br>Houston, TX 77001</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📞</span>
+                        <div class="contact-icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
                         <div>
                             <strong>Phone</strong>
                             <p>(555) 123-4567</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📧</span>
+                        <div class="contact-icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
                         <div>
                             <strong>Email</strong>
                             <p>info@truckprologistics.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">🕐</span>
+                        <div class="contact-icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
                         <div>
-                            <strong>Hours</strong>
-                            <p>Mon-Fri: 6AM - 6PM<br>Sat: 7AM - 2PM</p>
+                            <strong>Operating Hours</strong>
+                            <p>Mon – Fri: 6:00 AM – 6:00 PM<br>Sat: 7:00 AM – 2:00 PM</p>
                         </div>
                     </div>
                 </div>
@@ -276,21 +374,22 @@
                         <input type="email" id="email" name="email" placeholder="john@company.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="service">Service Needed</label>
+                        <label for="service">Service Required</label>
                         <select id="service" name="service" required>
                             <option value="">Select a service...</option>
-                            <option value="hauling">Heavy Hauling</option>
+                            <option value="tipper">Tipper Truck Haulage</option>
+                            <option value="grab">Grab Lorry Services</option>
+                            <option value="box">Box Truck Delivery</option>
                             <option value="sourcing">Material Sourcing</option>
-                            <option value="delivery">Site Delivery</option>
                             <option value="supply-chain">Supply Chain Management</option>
-                            <option value="other">Other</option>
+                            <option value="other">Other / Multiple Services</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project, materials needed, timeline..." required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your project, materials needed, quantities, delivery location, and timeline..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Message 📨</button>
+                    <button type="submit" class="btn btn-primary btn-full">Submit Enquiry</button>
                 </form>
             </div>
         </div>
@@ -300,14 +399,15 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <h3>🚛 TruckPro Logistics</h3>
-                <p>Your trusted partner for construction material logistics and sourcing. Moving materials, building futures.</p>
+                <h3><span class="logo-icon">&#9670;</span> TruckPro Logistics</h3>
+                <p>Specialist construction logistics and material sourcing. Tipper trucks, grab lorries, and box trucks serving the building trade.</p>
             </div>
             <div class="footer-links">
-                <h4>Quick Links</h4>
+                <h4>Company</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#fleet">Fleet</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -315,16 +415,26 @@
             <div class="footer-services">
                 <h4>Services</h4>
                 <ul>
-                    <li>Heavy Hauling</li>
+                    <li>Tipper Truck Haulage</li>
+                    <li>Grab Lorry Services</li>
+                    <li>Box Truck Delivery</li>
                     <li>Material Sourcing</li>
-                    <li>Site Delivery</li>
-                    <li>Supply Chain</li>
+                    <li>Supply Chain Management</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li>(555) 123-4567</li>
+                    <li>info@truckprologistics.com</li>
+                    <li>1234 Industrial Blvd</li>
+                    <li>Houston, TX 77001</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 TruckPro Logistics. All rights reserved. 🏗️</p>
+                <p>&copy; 2026 TruckPro Logistics. All rights reserved.</p>
             </div>
         </div>
     </footer>
